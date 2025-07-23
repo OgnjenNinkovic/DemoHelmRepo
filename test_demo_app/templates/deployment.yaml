@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
       - image: {{ .Values.containerImage }}
-        name: demoapp_image
+        name: demoapp-image
         resources: {}
 status: {}
