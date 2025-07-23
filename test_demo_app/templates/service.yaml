@@ -4,7 +4,7 @@ metadata:
   creationTimestamp: null
   labels:
     app: demoapp
-  name: demoapp_svc
+  name: demoappsvc
 spec:
   ports:
   - port: 80
