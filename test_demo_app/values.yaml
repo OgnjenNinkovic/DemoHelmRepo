@@ -1,1 +1,1 @@
-containerImage: nginx:1.17
+containerImage: auggie085/kub-first-app

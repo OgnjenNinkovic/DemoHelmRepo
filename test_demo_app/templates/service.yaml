@@ -3,15 +3,15 @@ kind: Service
 metadata:
   creationTimestamp: null
   labels:
-    app: nginx
-  name: nginx
+    app: demoapp
+  name: demoapp_svc
 spec:
   ports:
   - port: 80
     protocol: TCP
-    targetPort: 80
+    targetPort: 8080
   selector:
-    app: nginx
+    app: demoapp
   type: LoadBalancer
 status:
   loadBalancer: {}
