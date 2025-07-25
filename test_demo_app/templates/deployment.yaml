@@ -6,7 +6,7 @@ metadata:
     app: demoapp
   name: {{ .Release.Name }}
 spec:
-  replicas: 2
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
       app: demoapp
@@ -18,7 +18,7 @@ spec:
         app: demoapp
     spec:
       containers:
-      - image: {{ .Values.containerImage }}
+      - image: {{ .Values.image.repository }}:{{.Values.image.tag}}
         name: demoapp
         resources: {}
 status: {}

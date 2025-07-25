@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: auggie-demo-app
+  namespace: default
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/OgnjenNinkovic/DemoHelmRepo.git
+    path: test_demo_app
+    targetRevision: HEAD
+    helm:
+      valueFiles:
+        - values.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated: {}

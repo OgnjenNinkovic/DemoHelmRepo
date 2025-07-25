@@ -1,1 +1,6 @@
-containerImage: auggie085/demo-asp-core:v3
+replicaCount: 2
+
+image:
+  repository: auggie085/demo-asp-core
+  tag: v3
+  pullPolicy: IfNotPresent
