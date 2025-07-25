@@ -2,11 +2,14 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: auggie-demo-app
-  namespace: default
+  namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: auggie085/demo-asp-core
+    argocd-image-updater.argoproj.io/write-back-method: git
 spec:
   project: default
   source:
-    repoURL: https://github.com/OgnjenNinkovic/DemoHelmRepo.git
+    repoURL: git@github.com:OgnjenNinkovic/DemoHelmRepo.git
     path: test_demo_app
     targetRevision: HEAD
     helm:
