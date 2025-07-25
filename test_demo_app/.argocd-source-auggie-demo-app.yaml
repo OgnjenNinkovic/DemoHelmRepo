@@ -4,5 +4,5 @@ helm:
     value: auggie085/demo-asp-core
     forcestring: true
   - name: image.tag
-    value: v4
+    value: v5
     forcestring: true
