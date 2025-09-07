@@ -1,0 +1,11 @@
+name: Test Workflow
+on: workflow_dispatch #run manualy
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greeting
+        run: echo "Hello from test workfolw"
+      - name: Print goodbye
+        run: echo "Done - bye!"
+        
