@@ -1,5 +1,8 @@
 name: Test Workflow
-on: workflow_dispatch #run manualy
+on: 
+  pull_request:
+    types: [opened] # activity type
+  workflow_dispatch:
 jobs:
   first-job:
     runs-on: ubuntu-latest
